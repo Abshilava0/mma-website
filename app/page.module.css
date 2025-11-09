@@ -1,141 +1,137 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
-}
-
 .main {
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  min-height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.main video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(60%);
 }
 
-.intro {
+.mainInfo {
+  margin-bottom: 4em;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 50%;
+  gap: 1.5em;
+  text-align: right;
+ 
+  letter-spacing: 0.1em;
+  
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+.mainInfo h1 {
+  font-size: 4.5em;
+}
+.mainInfo p {
+  font-size: 2em;
+
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+.mainInfo button {
+  padding: 0.4em 1em;
+  font-size: 1.8em;
+  font-family: var(--font-display);
+  color: white;
+  background-color: transparent;
+  border: 2.5px solid white;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
+.mainInfo button:hover {
+  background-color: white;
+  color: black;
+   
 }
 
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
-}
-
-.ctas a {
+.coMainInfo {
+  margin-bottom: 4em;
+  height: 60%;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+   
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.coMainInfo img {
+  height: 100%;
+  object-fit: contain;
+ 
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
-}
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+@media (max-width: 1024px) {
+  .mainInfo h1 {
+    font-size: 3.5em;
   }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
+  .mainInfo p {
+    font-size: 1.8em;
+  }
+  .mainInfo button {
+    font-size: 1.5em;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .main {
-    padding: 48px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
-
-  .intro {
-    gap: 16px;
+  .mainInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
   }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
+  .mainInfo h1 {
+    font-size: 3em;
+  }
+  .mainInfo p {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .mainInfo button {
+    font-size: 1.5em;
+  }
+  .coMainInfo {
+    height: 40%;
+    margin-bottom: 2em;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+@media (max-width: 481px) {
+  .mainInfo {
+    margin-bottom:9em;
   }
-
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+  .mainInfo h1 {
+    font-size: 2em;
+  }
+  .mainInfo p {
+    font-size: 1.2em;
+  }
+  .mainInfo button {
+    font-size: 1.2em;
+    padding: 0.3em 0.8em;
+  }
+  .coMainInfo {
+    height: 30%;
   }
 }
