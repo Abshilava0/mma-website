@@ -69,25 +69,31 @@
   object-fit: contain;
 }
 
-.mainSecond {
-  margin-top: 4%;
+/* ✅ Create consistent spacing pattern for all major sections */
+ 
+.mainSecond,
+.mainThird,
+.mainFourth {
+  padding: 6em 0; /* consistent vertical padding */
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.mainSecond {
+  background-color: #121212;
+}
+
 .mainThird {
-  margin-top: 8%;
-  height: 55vh;
-  width: 100%;
+  height: auto; /* let padding control vertical space */
   background-image: url("/images/amateurTournament.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
+  background-color: #121212;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .mainThird div {
@@ -97,7 +103,6 @@
   justify-content: center;
   align-items: center;
   gap: 0.5em;
-  text-align: center;
 }
 
 .mainThird div h1,
@@ -133,17 +138,11 @@
   color: black;
 }
 
-
 .mainFourth {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  background-color: #121212;
 }
 
 .cards {
-  margin-top: 10%;
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -210,7 +209,7 @@
   margin: 1em 0;
 }
 
-
+/* 🔧 RESPONSIVE FIXES */
 
 @media (max-width: 1024px) {
   .mainInfo h1 {
@@ -240,9 +239,6 @@
   .mainThird div button {
     font-size: 1.5em;
   }
-  .cards {
-    margin-top: 20%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -255,11 +251,9 @@
 
   .mainInfo {
     width: 100%;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8em;
+    margin-bottom: 6em;
   }
 
   .mainInfo h1 {
@@ -300,7 +294,7 @@
 
 @media (max-width: 481px) {
   .mainInfo {
-    margin-bottom: 12em;
+    margin-bottom: 10em;
   }
 
   .mainInfo h1 {
@@ -330,10 +324,6 @@
 
   .mainThird div button {
     font-size: 1em;
-  }
-
-  .cards {
-    margin-top: 35%;
   }
 
   .card {
