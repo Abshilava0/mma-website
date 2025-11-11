@@ -6,6 +6,7 @@
   align-items: center;
   color: white;
 }
+
 .main video {
   position: absolute;
   top: 0;
@@ -26,17 +27,15 @@
   width: 50%;
   gap: 1.5em;
   text-align: right;
- 
   letter-spacing: 0.1em;
-  
 }
 
 .mainInfo h1 {
   font-size: 4.5em;
 }
+
 .mainInfo p {
   font-size: 2em;
-
 }
 
 .mainInfo button {
@@ -54,7 +53,6 @@
 .mainInfo button:hover {
   background-color: white;
   color: black;
-   
 }
 
 .coMainInfo {
@@ -64,25 +62,186 @@
   display: flex;
   justify-content: center;
   align-items: center;
-   
 }
 
 .coMainInfo img {
   height: 100%;
   object-fit: contain;
- 
 }
+
+.mainSecond {
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainThird {
+  margin-top: 8%;
+  height: 55vh;
+  width: 100%;
+  background-image: url("/images/amateurTournament.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainThird div {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  text-align: center;
+}
+
+.mainThird div h1,
+.mainThird div p,
+.mainThird div button {
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+.mainThird div h1 {
+  font-size: 5em;
+}
+
+.mainThird div p {
+  font-size: 1.3em;
+}
+
+.mainThird div button {
+  margin-top: 0.8em;
+  padding: 0.4em 1em;
+  font-size: 1.8em;
+  font-family: var(--font-display);
+  color: white;
+  background-color: transparent;
+  border: 2.5px solid white;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mainThird div button:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.mainFourth {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cards {
+  margin-top: 10%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 4em;
+  flex-wrap: wrap;
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: rgba(244, 244, 244, 0.989);
+  padding: 3em 3.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1em;
+  border-radius: 0.5em;
+  letter-spacing: 1px;
+  color: rgb(44, 44, 44);
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.card header h3 {
+  font-size: 1.5em;
+}
+
+.card header p {
+  color: rgb(49, 49, 49);
+}
+
+.card header h1 {
+  font-size: 3em;
+  margin-top: 0.3em;
+  font-family: 'Poppins', 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.card button {
+  width: 100%;
+  padding: 0.4em 0;
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  font-family: var(--font-display);
+  color: rgb(255, 255, 255);
+  background-color: rgb(30, 30, 30);
+  border: 2.5px solid rgb(0, 0, 0);
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card button:hover {
+  background-color: white;
+  color: rgb(30, 30, 30);
+}
+
+.card ul {
+  width: 100%;
+}
+
+.card ul li {
+  list-style: none;
+  margin: 1em 0;
+}
+
 
 
 @media (max-width: 1024px) {
   .mainInfo h1 {
     font-size: 3.5em;
   }
+
   .mainInfo p {
     font-size: 1.8em;
   }
+
   .mainInfo button {
     font-size: 1.5em;
+  }
+
+  .coMainInfo {
+    height: 50%;
+  }
+
+  .mainThird div h1 {
+    font-size: 3.8em;
+  }
+
+  .mainThird div p {
+    font-size: 1.5em;
+  }
+
+  .mainThird div button {
+    font-size: 1.5em;
+  }
+  .cards {
+    margin-top: 20%;
   }
 }
 
@@ -93,45 +252,91 @@
     align-items: center;
     text-align: center;
   }
+
   .mainInfo {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2em;
+    margin-bottom: 8em;
   }
+
   .mainInfo h1 {
     font-size: 3em;
   }
+
   .mainInfo p {
     font-size: 1.5em;
     text-align: center;
+    padding: 0 1em;
   }
+
   .mainInfo button {
     font-size: 1.5em;
   }
+
   .coMainInfo {
     height: 40%;
     margin-bottom: 2em;
+  }
+
+  .mainThird div h1 {
+    font-size: 3em;
+  }
+
+  .mainThird div p {
+    font-size: 1.2em;
+  }
+
+  .mainThird div button {
+    font-size: 1.5em;
+  }
+
+  .card {
+    font-size: 0.8em;
   }
 }
 
 @media (max-width: 481px) {
   .mainInfo {
-    margin-bottom:9em;
+    margin-bottom: 12em;
   }
+
   .mainInfo h1 {
     font-size: 2em;
   }
+
   .mainInfo p {
     font-size: 1.2em;
   }
+
   .mainInfo button {
     font-size: 1.2em;
     padding: 0.3em 0.8em;
   }
+
   .coMainInfo {
     height: 30%;
+  }
+
+  .mainThird div h1 {
+    font-size: 2.5em;
+  }
+
+  .mainThird div p {
+    font-size: 1em;
+  }
+
+  .mainThird div button {
+    font-size: 1em;
+  }
+
+  .cards {
+    margin-top: 35%;
+  }
+
+  .card {
+    font-size: 0.7em;
   }
 }
