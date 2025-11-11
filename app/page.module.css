@@ -73,10 +73,10 @@
 /* =========================
    SECOND, THIRD, FOURTH SECTIONS
 ========================= */
-
+.mainSecond,
 .mainThird,
 .mainFourth {
-  margin: 8em 0;
+  padding: 6em 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -85,11 +85,6 @@
 
 .mainSecond {
   background-color: #121212;
-  margin-top: 3.7em;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* MAIN THIRD - AMATEUR TOURNAMENT */
@@ -100,7 +95,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #121212;
-  padding: 2em 0;
 }
 
 .mainThird div{
