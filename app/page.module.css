@@ -41,7 +41,7 @@
 .mainInfo button {
   padding: 0.4em 1em;
   font-size: 1.8em;
-  font-family: var(--font-display);
+  font-family: var(--font-display); /* restored original font */
   color: white;
   background-color: transparent;
   border: 2.5px solid white;
@@ -56,9 +56,10 @@
 }
 
 .coMainInfo {
+  position: relative;
+  z-index: 2;
   margin-bottom: 4em;
   height: 60%;
-  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,12 +70,13 @@
   object-fit: contain;
 }
 
-/* ✅ Create consistent spacing pattern for all major sections */
- 
+/* =========================
+   SECOND, THIRD, FOURTH SECTIONS
+========================= */
 .mainSecond,
 .mainThird,
 .mainFourth {
-  padding: 6em 0; /* consistent vertical padding */
+  padding: 6em 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -85,24 +87,23 @@
   background-color: #121212;
 }
 
+/* MAIN THIRD - AMATEUR TOURNAMENT */
 .mainThird {
-  height: auto; /* let padding control vertical space */
+  height: auto;
   background-image: url("/images/amateurTournament.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #121212;
-  flex-direction: column;
-  text-align: center;
 }
 
-.mainThird div {
-  width: 80%;
+.mainThird div{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5em;
+  text-align: center;
+  gap: 1em;
 }
 
 .mainThird div h1,
@@ -118,13 +119,15 @@
 
 .mainThird div p {
   font-size: 1.3em;
+  max-width: 80%;
+   
 }
 
 .mainThird div button {
   margin-top: 0.8em;
   padding: 0.4em 1em;
   font-size: 1.8em;
-  font-family: var(--font-display);
+  font-family: var(--font-display); /* restored original font */
   color: white;
   background-color: transparent;
   border: 2.5px solid white;
@@ -133,21 +136,21 @@
   transition: all 0.3s ease;
 }
 
-.mainThird div button:hover {
+.mainThird button:hover {
   background-color: white;
   color: black;
 }
 
+/* MAIN FOURTH - CARDS */
 .mainFourth {
   background-color: #121212;
 }
 
 .cards {
   display: flex;
-  align-items: stretch;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 4em;
-  flex-wrap: wrap;
 }
 
 .card {
@@ -156,14 +159,13 @@
   padding: 3em 3.5em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 1em;
   border-radius: 0.5em;
   letter-spacing: 1px;
   color: rgb(44, 44, 44);
   font-weight: lighter;
   cursor: pointer;
+  min-width: 250px;
 }
 
 .card header h3 {
@@ -172,6 +174,7 @@
 
 .card header p {
   color: rgb(49, 49, 49);
+  font-size: 1em;
 }
 
 .card header h1 {
@@ -185,9 +188,9 @@
   width: 100%;
   padding: 0.4em 0;
   font-size: 1.2em;
-  letter-spacing: 3px;
-  font-family: var(--font-display);
-  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  font-family: var(--font-display); /* restored original font */
+  color: white;
   background-color: rgb(30, 30, 30);
   border: 2.5px solid rgb(0, 0, 0);
   border-radius: 0.3em;
@@ -207,10 +210,14 @@
 .card ul li {
   list-style: none;
   margin: 1em 0;
+  font-size: 1em;
 }
 
-/* 🔧 RESPONSIVE FIXES */
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
 
+/* Tablet Large */
 @media (max-width: 1024px) {
   .mainInfo h1 {
     font-size: 3.5em;
@@ -228,32 +235,34 @@
     height: 50%;
   }
 
-  .mainThird div h1 {
+  .mainThird h1 {
     font-size: 3.8em;
   }
 
-  .mainThird div p {
+  .mainThird p {
     font-size: 1.5em;
   }
 
-  .mainThird div button {
+  .mainThird button {
     font-size: 1.5em;
   }
 }
 
+/* Tablet Small */
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    font-size: 0.9em;
   }
 
   .mainInfo {
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-bottom: 6em;
+    margin-bottom: 4em;
   }
 
   .mainInfo h1 {
@@ -262,8 +271,8 @@
 
   .mainInfo p {
     font-size: 1.5em;
-    text-align: center;
     padding: 0 1em;
+    text-align: center;
   }
 
   .mainInfo button {
@@ -284,17 +293,27 @@
   }
 
   .mainThird div button {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   .card {
-    font-size: 0.8em;
+    font-size: 0.85em;
+    padding: 2em 2.5em;
+  }
+
+  .card header h1 {
+    font-size: 2.5em;
+  }
+
+  .card header h3 {
+    font-size: 1.3em;
   }
 }
 
-@media (max-width: 481px) {
+/* Mobile */
+@media (max-width: 480px) {
   .mainInfo {
-    margin-bottom: 10em;
+    margin-bottom: 6em;
   }
 
   .mainInfo h1 {
@@ -302,7 +321,7 @@
   }
 
   .mainInfo p {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   .mainInfo button {
@@ -324,9 +343,20 @@
 
   .mainThird div button {
     font-size: 1em;
+    padding: 0.3em 0.7em;
   }
 
   .card {
-    font-size: 0.7em;
+    font-size: 0.75em;
+    padding: 1.5em 2em;
+    min-width: 200px;
+  }
+
+  .card header h1 {
+    font-size: 2em;
+  }
+
+  .card header h3 {
+    font-size: 1.1em;
   }
 }
